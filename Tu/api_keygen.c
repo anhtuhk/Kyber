@@ -18,9 +18,9 @@ int main() {
 	}
 	fclose(pk_file);
 
-	FILE *sk_file = fopen("../report/secret_key.txt"."w");
+	FILE *sk_file = fopen("../report/secret_key.txt","w");
 	fprintf(sk_file,"Secret_key:\n");
-	for (i=0; i< KYBET_SECRETKEYBYTES; i++) {
+	for (i=0; i< KYBER_SECRETKEYBYTES; i++) {
 		fprintf(sk_file,"%02X", sk[i]);
 	}
 	fclose(sk_file);
