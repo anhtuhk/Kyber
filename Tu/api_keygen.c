@@ -11,12 +11,16 @@ int main() {
 	
 	crypto_kem_keypair(pk, sk);
 
+	printf("-------------Goi ham keypair--------------\n");
 	FILE *pk_file = fopen("../report/public_key.txt","w");
+	printf("-------------pk_file1--------------\n");
 	fprintf(pk_file,"Public_key:\n");
+	printf("-------------pk_file2--------------\n");
 	for (i=0; i< KYBER_PUBLICKEYBYTES; i++) {
 		fprintf(pk_file,"%02X",pk[i]);
 	}
 	fclose(pk_file);
+	
 
 	FILE *sk_file = fopen("../report/secret_key.txt","w");
 	fprintf(sk_file,"Secret_key:\n");
@@ -26,5 +30,6 @@ int main() {
 	fclose(sk_file);
 
 	printf("Done.\n");
+	return 0;
 }	
 	

@@ -34,17 +34,17 @@ all: encaps decaps keygen
 encaps: $(ENCAPS)
 
 $(ENCAPS): $(OBJECTS) $(ENCAPS_OBJ)
-	$(CC) $(CFLAGS) $(EX_CFLAGS) -o $@ $^ -DKYBER_K=2
+	$(CC) $(CFLAGS) -DKYBER_K=2 $(EX_CFLAGS) -o $@ $^ 
 
 decaps: $(DECAPS)
 
 $(DECAPS): $(OBJECTS) $(DECAPS_OBJ)
-	$(CC) $(CFLAGS) $(EX_CFLAGS) -o $@ $^ -DKYBER_K=2
+	$(CC) $(CFLAGS) -DKYBER_K=2 $(EX_CFLAGS) -o $@ $^ 
 
 keygen: $(KEYGEN)
 
 $(KEYGEN): $(OBJECTS) $(KEYGEN_OBJ)
-	$(CC) $(CFLAGS) $(EX_CFLAGS) -o $@ $^ -DKYBER_K=2
+	$(CC) $(CFLAGS) -DKYBER_K=2 $(EX_CFLAGS) -o $@ $^ 
 
 
 %.o: %.c $(HEADERS)
