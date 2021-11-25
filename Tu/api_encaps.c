@@ -17,7 +17,7 @@ int main() {
 	printf("-------------kyber512--------------\n");
 	printf("Encapsulating...\n");
 
-	FILE* fp = fopen("../report/public_key.txt","r");
+	FILE* fp = fopen("./report/public_key.txt","r");
 	if (fp==NULL)
 	{
 		printf("Catching errors with public_key.txt\n");
@@ -43,7 +43,7 @@ int main() {
 
 	crypto_kem_enc(ct, ss, pk);
 
-	FILE *ct_file = fopen("../report/ciphertext_after_encaps.txt","w");
+	FILE *ct_file = fopen("./report/ciphertext_after_encaps.txt","w");
 	fprintf(ct_file,"Public_key:\n");
 	for (i=0; i< KYBER_PUBLICKEYBYTES; i++) {
 		fprintf(ct_file,"%02X",pk[i]);
@@ -55,7 +55,7 @@ int main() {
 	}
 	fclose(ct_file);
 
-	FILE *shk_file = fopen("../report/shared_key_after_encaps.txt", "w");
+	FILE *shk_file = fopen("./report/shared_key_after_encaps.txt", "w");
 	fprintf(shk_file,"Shared_key:\n");
 	for (i=0; i< KYBER_SSBYTES; i++) {
 		fprintf(shk_file,"%02X", ss[i]);

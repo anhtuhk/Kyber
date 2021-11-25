@@ -17,7 +17,7 @@ int main() {
 	printf("-------------kyber512--------------\n");
 	printf("Decapsulating...\n");
 
-	FILE* fp = fopen("../report/public_key.txt","r");
+	FILE* fp = fopen("./report/public_key.txt","r");
 	if (fp==NULL)
 	{
 		printf("Catching errors with secret_key.txt\n");
@@ -41,7 +41,7 @@ int main() {
 
 	fclose(fp);
 
-	FILE* ct_file_en = fopen("../report/ciphertext_after_encaps.txt","r");
+	FILE* ct_file_en = fopen("./report/ciphertext_after_encaps.txt","r");
 	if (ct_file_en==NULL)
 	{
 		printf("Catching errors with ciphertext_after_encaps.txt\n");
@@ -67,7 +67,7 @@ int main() {
 
 	crypto_kem_dec(ss, ct, sk);
 
-	FILE *ct_file_de = fopen("../report/ciphertext_after_decaps.txt","w");
+	FILE *ct_file_de = fopen("./report/ciphertext_after_decaps.txt","w");
 	fprintf(ct_file_de,"Secret_key:\n");
 	for (i=0; i< KYBER_SECRETKEYBYTES; i++) {
 		fprintf(ct_file_de,"%02X",sk[i]);
@@ -79,7 +79,7 @@ int main() {
 	}
 	fclose(ct_file_de);
 
-	FILE *shk_file = fopen("../report/shared_key_after_decaps.txt", "w");
+	FILE *shk_file = fopen("./report/shared_key_after_decaps.txt", "w");
 	fprintf(shk_file,"Shared_key:\n");
 	for (i=0; i< KYBER_SSBYTES; i++) {
 		fprintf(shk_file,"%02X", ss[i]);
