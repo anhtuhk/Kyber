@@ -68,7 +68,7 @@ int main() {
 	crypto_kem_dec(ss, ct, sk);
 
 	FILE *ct_file_de = fopen("../report/ciphertext_after_decaps.txt","w");
-	fprintf(ct_file_de,"Secret_key:\n");
+	fprintf(ct_file,"Secret_key:\n");
 	for (i=0; i< KYBER_SECRETKEYBYTES; i++) {
 		fprintf(ct_file_de,"%02X",sk[i]);
 	}

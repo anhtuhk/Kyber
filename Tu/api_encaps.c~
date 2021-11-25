@@ -1,4 +1,4 @@
-#include "../ref/kem.h"
+#include "../ref/api.h"
 #include "../ref/params.h"
 #include "stdio.h"
 #include "stdint.h"
