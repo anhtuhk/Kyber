@@ -9,15 +9,15 @@ MY_DIR = Tu
 OBJECTS = $(OBJ_DIR)/kex.o 	$(OBJ_DIR)/kem.o     $(OBJ_DIR)/indcpa.o \
 	  $(OBJ_DIR)/polyvec.o  $(OBJ_DIR)/poly.o    $(OBJ_DIR)/ntt.o \
 	  $(OBJ_DIR)/cbd.o 	$(OBJ_DIR)/reduce.o  $(OBJ_DIR)/verify.o \
-	  $(OBJ_DIR)/fips202.o  $(OBJ_DIR)/symmetric-shake.o
+	  $(OBJ_DIR)/fips202.o  $(OBJ_DIR)/symmetric-shake.o \
+	  $(OBJ_DIR)/randombytes.o
 
 HEADERS = $(OBJ_DIR)/params.h   $(OBJ_DIR)/kex.h       $(OBJ_DIR)/kem.h \
 	  $(OBJ_DIR)/indcpa.h   $(OBJ_DIR)/polyvec.h   $(OBJ_DIR)/poly.h \
 	  $(OBJ_DIR)/ntt.h      $(OBJ_DIR)/cbd.h       $(OBJ_DIR)/reduce.c \
 	  $(OBJ_DIR)/verify.h   $(OBJ_DIR)/symmetric.h $(OBJ_DIR)/fips202.h \
-	  $(OBJ_DIR)/randombytes.c 	$(OBJ_DIR)/test_kyber.c
 
-#test_kyber512: $(SOURCESKECCAK) $(HEADERSKECCAK) test_kyber.c randombytes.c $(CC) $(CFLAGS) -DKYBER_K=2 $(SOURCESKECCAK) randombytes.c test_kyber.c -o test_kyber512
+#test_kyber512: $(SOURCESKECCAK) $(HEADERSKECCAK) test_kyber.c randombytes.c $(CC) $(CFLAGS) -DKYBER_K=2 $(SOURCESKECCAK) randombytes.c test_kyber.c -o test_kyber512S
 
 ENCAPS_OBJ = $(MY_DIR)/api_encaps.o
 DECAPS_OBJ = $(MY_DIR)/api_decaps.o
