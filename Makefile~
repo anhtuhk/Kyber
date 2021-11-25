@@ -9,7 +9,7 @@ MY_DIR = Tu
 OBJECTS = $(OBJ_DIR)/kex.o 	$(OBJ_DIR)/kem.o     $(OBJ_DIR)/indcpa.o \
 	  $(OBJ_DIR)/polyvec.o  $(OBJ_DIR)/poly.o    $(OBJ_DIR)/ntt.o \
 	  $(OBJ_DIR)/cbd.o 	$(OBJ_DIR)/reduce.o  $(OBJ_DIR)/verify.o \
-	  $(OBJ_DIR)/fips202.o  $(OBJ_DIR)/symmetric-shake.o
+	  $(OBJ_DIR)/fips202.o  $(OBJ_DIR)/symmetric-shake.o \n
 	  $(OBJ_DIR)/randombytes.o 	$(OBJ_DIR)/test_kyber.o
 
 
